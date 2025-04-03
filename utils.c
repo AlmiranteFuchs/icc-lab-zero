@@ -1,5 +1,6 @@
 #include "utils.h"
 #include <stdint.h>
+#include <math.h>
 
 /*  Retorna tempo em milisegundos
 
@@ -20,5 +21,5 @@ double timestamp(void) {
 real_t abs_value(real_t x) { return (x < 0) ? -x : x; }
 
 int64_t ulp_distance(Double_t x, Double_t y) {
-  return (abs_value((x.i - y.i)));
+  return (fabs((x.i - y.i)));
 }
